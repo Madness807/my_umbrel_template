@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: madness-homarr_homarr_1
+      APP_PORT: 7575
+    
+  homarr:
+    image: ghcr.io/homarr-labs/homarr:latest
+    user: "1000:1000"
+    init: true
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/appdata:/appdata
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      SECRET_ENCRYPTION_KEY: ${APP_SEED}

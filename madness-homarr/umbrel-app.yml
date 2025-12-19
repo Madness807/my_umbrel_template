@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: madness-homarr
+name: Homarr
+tagline: A simple, yet powerful dashboard for your server
+icon: https://homarr.dev/img/logo.png
+category: Dashboard
+version: "0.15.6"
+port: 7575
+description: >-
+  Homarr is a sleek, modern dashboard that puts all of your apps and services at your fingertips.
+  
+  With Homarr, you can access all of your apps and services in one place, making it easy to manage your server and keep track of everything. Homarr integrates with the services you use and provides a clean and organized interface for managing your apps and services.
+  
+  Features:
+  - Integrates with services you use.
+  - Search the web directly from your homelab.
+  - Real-time status monitoring for services.
+  - Easy to use and manage.
+  - Modern, customizable interface.
+  - Docker integration support.
+
+developer: Homarr Labs
+website: https://homarr.dev
+submitter: Madness807
+submission: https://github.com/Madness807/my_umbrel_template
+repo: https://github.com/homarr-labs/homarr
+support: https://discord.com/invite/aCsmEV5RgA
+gallery:
+  - https://homarr.dev/img/logo.png
+releaseNotes: >-
+  Initial release of Homarr for Umbrel.
+  
+  Homarr is a powerful dashboard for managing your server applications and services.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
