@@ -8,17 +8,8 @@ services:
       APP_HOST: madness-homarr_homarr_1
       APP_PORT: 7575
     
-  redis:
-    image: redis:7-alpine
-    user: "1000:1000"
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/data/redis:/data
-    command: redis-server --save 60 1 --loglevel warning
-
   homarr:
     image: ghcr.io/homarr-labs/homarr:latest
-    user: "1000:1000"
     init: true
     restart: on-failure
     volumes:
@@ -26,7 +17,3 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       SECRET_ENCRYPTION_KEY: ${APP_SEED}
-      REDIS_HOST: madness-homarr_redis_1
-      REDIS_PORT: 6379
-    depends_on:
-      - redis
